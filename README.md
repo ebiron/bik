@@ -6,7 +6,6 @@
 | **Raporlayan** | HaberPanelim v9 Teknik Ekip |
 | **Tracker Versiyon** | v2 (NS01 collector.p.analitik.bik.gov.tr) |
 | **Dosya** | [`t-1-kurtalangazetesi-com-0.js`](https://cdn-v2.p.analitik.bik.gov.tr/t-1-kurtalangazetesi-com-0.js) |
-| **Doğrulama** | CDN'den `curl` ile indirilen dosya ile karşılaştırılmıştır — **birebir aynı** |
 
 ---
 
