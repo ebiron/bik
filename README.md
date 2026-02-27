@@ -148,37 +148,6 @@ Alternatif daha güvenilir bot tespit yöntemleri:
 
 ---
 
-## Bug #3 — Zincirleme Etki: `distinct_id` Tüm Kullanıcılar İçin Aynı
-
-| | |
-|---|---|
-| **Önem Derecesi** | 🟡 **ORTA** — Bug #1'in doğrudan sonucu |
-| **Etki Alanı** | Sunucu tarafı (collector backend) |
-
-### Sorun Açıklaması
-
-Collector backend'inde `distinct_id` üretimi:
-
-```
-1. İlk tercih  : tracker'dan gelen decoded['id'] (önceki response'tan dönen id)
-2. İkinci tercih: decoded['fingerprint']
-3. Son çare     : random_bytes(16) — rastgele UUID
-```
-
-İlk sayfa görüntülemede `decoded['id']` boş → fingerprint kullanılıyor.
-Bug #1 nedeniyle fingerprint **herkesin aynı değeri** → `distinct_id` de herkes için aynı.
-
-**Sonuç:**
-- Tekil ziyaretçi sayısı her zaman **1** görünür
-- Kullanıcı bazlı analiz yapılamaz
-- Retention/cohort analizleri anlamsız
-
-### Önerilen Düzeltme
-
-Bug #1 düzeltildiğinde bu sorun **otomatik olarak çözülür**.
-Ek güvenlik olarak backend'de fingerprint collision kontrolü eklenebilir.
-
----
 
 ## Etki Analizi
 
