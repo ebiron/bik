@@ -158,7 +158,6 @@ Bu bug'lar BİK Analitik tracker v2 kullanan **TÜM yayıncıları** etkilemekte
 | Metrik | Durum | Açıklama |
 |--------|-------|----------|
 | Fingerprint tabanlı tekil ziyaretçi | ❌ | Tamamen yanlış — herkes aynı |
-| `distinct_id` tabanlı kullanıcı ayrımı | ❌ | Herkes aynı id |
 | Bot/gerçek kullanıcı oranı | ❌ | Safari + mobil = bot |
 | Cihaz bazlı fingerprint dağılımı | ❌ | Tek değer |
 | Hardware collector verisi | ❌ | Bot'larda exclude ediliyor |
